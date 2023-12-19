@@ -14,7 +14,8 @@
     win_flag db 0
     player db "0$"
 
-    player_message db "                     Gano el Jugador $"
+    player_message db "                     Turno del Jugador $"
+    player_win db "                     Gano el Jugador $"
     type_message db "Escribe una posicion (1-9): $"
 
     msg_enter_to_start db "                    Enter para comenzar$"
@@ -367,7 +368,7 @@ game_over:
     lea     dx, new_line
     call    print
 
-    lea     dx, player_message
+    lea     dx, player_win
     call    print
 
     lea     dx, player
